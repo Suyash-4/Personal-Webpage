@@ -2,6 +2,7 @@
 import React from "react";
 import "./style.css";
 import Navbar from "../pages/navbar.jsx";
+import BgBlurredCircles from "../pages/BgBlurredCircles.jsx";
 import { ReactLenis, useLenis } from "lenis/react";
 
 const App = () => {
@@ -12,7 +13,7 @@ const App = () => {
   return (
     <ReactLenis root smooth duration={1.2}>
       <Navbar />
-      
+      <BgBlurredCircles />
     </ReactLenis>
   );
 };
