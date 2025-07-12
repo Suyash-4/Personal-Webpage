@@ -5,6 +5,7 @@ import Navbar from "../pages/navbar.jsx";
 import BgBlurredCircles from "../pages/BgBlurredCircles.jsx";
 import { ReactLenis, useLenis } from "lenis/react";
 import { IoIosArrowDown } from "react-icons/io";
+import { GoSun } from "react-icons/go";
 
 
 const App = () => {
