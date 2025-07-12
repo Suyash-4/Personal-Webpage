@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+@media (max-width: 400px) {
+    nav #container{
+        width: 90%;
+        
+    }
+}
