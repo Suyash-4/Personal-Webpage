@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import Lottie from "lottie-react";
 import "./style.css";
 import Navbar from "./pages/navbar.jsx";
