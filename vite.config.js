@@ -23,7 +23,7 @@ export default defineConfig({
     exclude: [
       // Exclude the libraries known to cause Rollup build errors
       "lenis/react",
-      "lottie-react",
+      
     ],
   },
 });
