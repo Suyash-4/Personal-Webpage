@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Specific files to ignore
+my-secret-file.txt
+src/config/api-keys.js
