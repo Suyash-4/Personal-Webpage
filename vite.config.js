@@ -15,15 +15,15 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [react(), tailwindcss()],
 
-  // FIX: This configuration section tells Vite/Rollup to exclude specific dependencies
-  // from its internal optimization process. This prevents the "Cannot add property 0,
-  // object is not extensible" error caused by Rollup trying to mutate frozen objects
-  // inside these external libraries (like lenis/react or lottie-react).
+  // 1. Alias the lottie-web import to use the correct ES module path.
+  resolve: {
+    alias: {
+      "lottie-web": "lottie-web/build/player/lottie.js",
+    },
+  },
+
+  // 2. Exclude the dependencies to prevent the "object is not extensible" compiler crash.
   optimizeDeps: {
-    exclude: [
-      // Exclude the libraries known to cause Rollup build errors
-      "lenis/react",
-      
-    ],
+    exclude: ["lenis/react", "lottie-react"],
   },
 });
