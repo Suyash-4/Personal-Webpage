@@ -5,7 +5,6 @@ import BgBlurredCircles from "./pages/BgBlurredCircles.jsx";
 import { ReactLenis, useLenis } from "lenis/react";
 import { IoIosArrowDown } from "react-icons/io";
 import { GoSun } from "react-icons/go";
-import Flow1 from "./assets/Flow1.json"; // Your Lottie JSON data
 
 const App = () => {
   const lenis = useLenis((lenis) => {
