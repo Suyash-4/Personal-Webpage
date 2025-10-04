@@ -68,7 +68,7 @@ const Nav = () => {
       {onMobile && !menuOpen && (
         <motion.div
           key="dots"
-          className="fixed z-10 top-1/2 -translate-y-1/2 left-7 cursor-pointer"
+          className="fixed z-10 top-1/2 -translate-y-1/2 left-4 cursor-pointer"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -87,7 +87,7 @@ const Nav = () => {
 
           <motion.div
             key="mobileMenu"
-            className="fixed z-10 top-1/2 left-7 -translate-y-1/2"
+            className="fixed z-10 top-1/2 left-4 -translate-y-1/2"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
