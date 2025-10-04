@@ -13,25 +13,26 @@ const App = () => {
   });
 
   return (
-    <ReactLenis root smooth duration={1.2}>
+    <ReactLenis root={true} smooth duration={1.2}>
       <>
         <BgBlurredCircles />
-        {/* <div className="fixed top-5 right-5 text-white z-50">
-          <button onClick={() => lenis.scrollTo(0)}>Scroll to Top</button>
-        </div> */}
-        <div className="grid grid-cols-[10%_90%] h-screen">
-          <div className="flex flex-col items-center justify-center h-screen relative z-10">
-            <Nav />
-          </div>
-          <div
-            className="flex flex-col h-screen relative z-5  
-                          backdrop-blur-xl border border-white/20 rounded-l-4xl py-5 pl-5"
-          >
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
+
+        {/* ✅ Outer wrapper handles spacing */}
+        <div className="h-screen px-0 py-[4%]">
+          <div className="grid grid-cols-[10%_90%] h-full">
+            {/* Left Navbar */}
+            <div className="flex flex-col items-center justify-center relative z-10">
+              <Nav />
+            </div>
+
+            {/* Main Content Container */}
+            <div className="flex flex-col relative z-5 backdrop-blur-xl border-l border-t border-b border-white/20 rounded-l-4xl py-5 pl-5">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/contact" element={<Contact />} />
+              </Routes>
+            </div>
           </div>
         </div>
       </>
