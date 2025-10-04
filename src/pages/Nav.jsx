@@ -1,6 +1,7 @@
 /* eslint-disable */
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Routes, Route, Link } from "react-router-dom";
 
 const Nav = () => {
   const [onMobile, setOnMobile] = useState(false);
@@ -48,13 +49,13 @@ const Nav = () => {
         <div className="flex flex-col items-center gap-10 w-full">
           <ol className="flex flex-col gap-6 text-emerald-300 text-xl font-light cursor-pointer text-shadow-md">
             <li className="hover:text-white transition-colors duration-300">
-              About
+              <Link to="/">Home</Link>
             </li>
             <li className="hover:text-white transition-colors duration-300">
-              Projects
+              <Link to="/projects">Projects</Link>
             </li>
             <li className="hover:text-white transition-colors duration-300">
-              Contact
+              <Link to="/contact">Contact</Link>
             </li>
           </ol>
         </div>
@@ -67,7 +68,7 @@ const Nav = () => {
       {onMobile && !menuOpen && (
         <motion.div
           key="dots"
-          className="fixed z-10 top-1/2 -translate-y-1/2 left-5 cursor-pointer"
+          className="fixed z-10 top-1/2 -translate-y-1/2 left-7 cursor-pointer"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -86,7 +87,7 @@ const Nav = () => {
 
           <motion.div
             key="mobileMenu"
-            className="fixed z-10 top-1/2 left-5 -translate-y-1/2"
+            className="fixed z-10 top-1/2 left-7 -translate-y-1/2"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -100,7 +101,7 @@ const Nav = () => {
       {!onMobile && (
         <motion.div
           key="navbar"
-          className="fixed z-10 top-1/2 -translate-y-1/2 left-0 pl-5"
+          className="fixed z-10 top-1/2 -translate-y-1/2 left-7"
           variants={fadeVariants}
           initial="hidden"
           animate="visible"
