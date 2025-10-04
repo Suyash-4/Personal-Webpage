@@ -7,6 +7,7 @@ import Nav from "./pages/Nav.jsx";
 import Home from "./pages/Home.jsx";
 import Projects from "./pages/Projects.jsx";
 import Contact from "./pages/Contact.jsx";
+import UnderDevelopment from "./assets/UnderDevelopment.jsx";
 const App = () => {
   const lenis = useLenis((lenis) => {
     // console.log(lenis);
@@ -16,9 +17,13 @@ const App = () => {
     <ReactLenis root={true} smooth duration={1.2}>
       <>
         <BgBlurredCircles />
-        <div className="fixed top-5 right-5 text-white/30 z-50">
-          {" "}
-          <button onClick={() => lenis.scrollTo(0)}>Scroll to Top</button>{" "}
+        <div className="absolute top-3 left-3 z-50">
+          <UnderDevelopment />
+        </div>
+        <div className="fixed top-3 right-5 text-white/30 z-50">
+          <button className="" onClick={() => lenis.scrollTo(0)}>
+            Scroll to Top
+          </button>{" "}
         </div>
         <div className="h-screen px-0 py-[3%]">
           <div className="grid grid-cols-[10%_90%] h-full">
