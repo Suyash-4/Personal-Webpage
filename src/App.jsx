@@ -19,7 +19,7 @@ const App = () => {
         <div className="absolute top-3 left-3 z-50">
           <UnderDevelopment />
         </div>
-        <div className="fixed top-3 right-5 text-white/30 z-50">
+        <div className="fixed top-5 right-5 text-white/50 z-50">
           <button className="" onClick={() => lenis.scrollTo(0)}>
             Scroll to Top
           </button>{" "}
@@ -31,7 +31,7 @@ const App = () => {
               <Nav />
             </div>
             {/* Main Content Container */}
-            <div className="flex flex-col relative z-5 backdrop-blur-2xl border-l border-t border-b border-white/20 rounded-l-4xl py-5 pl-5 border-b-amber-300/20 shadow-[0px_29px_59px_-1px_rgba(234,_179,_8,_0.09)]">
+            <div className="flex flex-col relative z-5 backdrop-blur-2xl border-l border-t border-b border-white/20 rounded-l-4xl py-5 pl-5 border-b-amber-300/20 shadow-[0px_29px_59px_-1px_rgba(234,_179,_8,_0.09)] ">
               <MainRouter />
             </div>
           </div>
