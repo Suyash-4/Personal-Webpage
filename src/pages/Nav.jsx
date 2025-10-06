@@ -8,7 +8,7 @@ const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   useEffect(() => {
     const checkScreenSize = () => {
-      setOnMobile(window.innerWidth <= 768);
+      setOnMobile(window.innerWidth <= 900);
     };
 
     checkScreenSize();

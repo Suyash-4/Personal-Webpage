@@ -137,7 +137,7 @@ const Contact = () => {
                 <label className="text-lg font-medium">Message</label>
                 <textarea
                   name="message"
-                  className="p-2 h-[100px] rounded-t-2xl border-b border-white/20 w-full sm:w-1/3 focus:border-emerald-600/40 transition-all duration-500 outline-none bg-transparent focus:shadow-[0px_10px_30px_-9px_rgba(16,_185,_129,_0.2)] resize-y overflow-hidden"
+                  className="p-2 h-[70px] max-h-[150px] rounded-t-2xl border-b border-white/20 w-full sm:w-1/3 focus:border-emerald-600/40 transition-all duration-500 outline-none bg-transparent focus:shadow-[0px_10px_30px_-9px_rgba(16,_185,_129,_0.2)] resize-y overflow-hidden"
                 />
                 <ValidationError
                   prefix="Message"
